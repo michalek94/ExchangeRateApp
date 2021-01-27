@@ -1,0 +1,45 @@
+platform :ios, '10.0'
+
+def sharedPods
+   pod 'Alamofire'
+end
+
+target 'ExchangeRateApp' do
+  use_frameworks!
+  inhibit_all_warnings!
+
+end
+
+target 'ExchangeRateAppView' do
+  use_frameworks!
+  inhibit_all_warnings!
+
+  pod "TinyConstraints"
+end
+
+target 'ExchangeRateAppViewModel' do
+  use_frameworks!
+  inhibit_all_warnings!
+
+  sharedPods
+end
+
+target 'ExchangeRateAppModel' do
+  use_frameworks!
+  inhibit_all_warnings!
+
+end
+
+target 'ExchangeRateAppService' do
+  use_frameworks!
+  inhibit_all_warnings!
+
+  sharedPods
+end
+
+target 'ExchangeRateAppCommon' do
+  use_frameworks!
+  inhibit_all_warnings!
+
+  pod 'R.swift'
+end

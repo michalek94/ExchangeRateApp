@@ -1,6 +1,6 @@
 //
 //  NavigationTopBarView.swift
-//  ExchangeRateAppView
+//  ExchangeRateAppViewViewModel
 //
 //  Created by Michał Pankowski on 27/01/2021.
 //  Copyright © 2021 Michał Pankowski. All rights reserved.
@@ -40,15 +40,10 @@ public class NavigationTopBarView: BaseView {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        
+        label.font = .systemFont(ofSize: 18.0, weight: .bold)
+        label.textColor = .black
         return label
     }()
-    
-    public override init() {
-        super.init()
-    }
-    
-    public required init?(coder: NSCoder) { nil }
     
     public override func createViewsHierarchy() {
         super.createViewsHierarchy()
@@ -91,7 +86,11 @@ public class NavigationTopBarView: BaseView {
         delegate?.leftButtonTapped(inView: self, sender: sender)
     }
     
-    public func showHideBackButtonIfNeeded(_ isNeeded: Bool) {
+    public func setTitle(_ title: String) {
+        titleLabel.text = title
+    }
+    
+    public func showHideBackButtonIfNeeded(_ isNeeded: Bool = true) {
         isNeeded ? leftButton.fadeIn() : leftButton.fadeOut()
     }
     

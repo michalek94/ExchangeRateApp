@@ -1,6 +1,6 @@
 //
 //  RefreshableTableView.swift
-//  ExchangeRateAppView
+//  ExchangeRateAppViewViewModel
 //
 //  Created by Michał Pankowski on 27/01/2021.
 //  Copyright © 2021 Michał Pankowski. All rights reserved.
@@ -58,7 +58,7 @@ public class RefreshableTableView: UITableView {
         refreshLoader.tintColor = .darkGray
     }
 
-    private func reset(completion: @escaping ()->()) {
+    private func reset(completion: @escaping () -> ()) {
         refreshDelegate?.refresh(completion: completion)
     }
 
@@ -71,10 +71,6 @@ public class RefreshableTableView: UITableView {
     public func showLoadingFooterIfNeeded(_ isNeeded: Bool) {
         isNeeded ? activityIndicatorView.startAnimating() : activityIndicatorView.stopAnimating()
         tableFooterView = isNeeded ? loadingView : nil
-    }
-
-    override open func dequeueReusableCell(withIdentifier identifier: String, for indexPath: IndexPath) -> UITableViewCell {
-        return super.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
     }
 
 }

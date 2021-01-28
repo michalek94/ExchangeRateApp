@@ -6,7 +6,7 @@
 //  Copyright © 2021 Michał Pankowski. All rights reserved.
 //
 
-public enum ExchangeRateTable: String {
+public enum ExchangeRateTable: String, CaseIterable {
     case tableA = "A"
     case tableB = "B"
     case tableC = "C"

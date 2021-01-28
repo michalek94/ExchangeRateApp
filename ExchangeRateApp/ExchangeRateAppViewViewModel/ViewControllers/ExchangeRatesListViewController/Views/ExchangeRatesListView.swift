@@ -1,18 +1,24 @@
 //
 //  ExchangeRatesListView.swift
-//  ExchangeRateAppView
+//  ExchangeRateAppViewViewModel
 //
 //  Created by Michał Pankowski on 27/01/2021.
 //  Copyright © 2021 Michał Pankowski. All rights reserved.
 //
 
-import ExchangeRateAppViewModel
 import ExchangeRateAppCommon
 import TinyConstraints
 
+public protocol ExchangeRatesListViewDelegate: class {
+    func onSegmentedControlSelected(inView view: ExchangeRatesListView, sender: SegmentedControl)
+}
+
 public class ExchangeRatesListView: BaseView {
     
+    public weak var delegate: ExchangeRatesListViewDelegate?
+    
     private lazy var topBar: NavigationTopBarView = { NavigationTopBarView() }()
+    private lazy var segmentedControl: SegmentedControl = { SegmentedControl() }()
     private(set) public lazy var tableView: RefreshableTableView = {
         let tableView = RefreshableTableView()
         var frame: CGRect = .zero
@@ -27,6 +33,7 @@ public class ExchangeRatesListView: BaseView {
         tableView.separatorStyle = .none
         tableView.register(ExchangeRateCell.self, forCellReuseIdentifier: ExchangeRateCell.identifier)
         tableView.backgroundColor = .clear
+        tableView.contentInset.bottom = UIDevice.current.bottomSafeAreaInset
         return tableView
     }()
     
@@ -38,27 +45,42 @@ public class ExchangeRatesListView: BaseView {
     
     public override func createViewsHierarchy() {
         super.createViewsHierarchy()
-        add(topBar,
-            tableView)
+        add(
+            topBar,
+            segmentedControl,
+            tableView
+        )
     }
     
     public override func setupLayout() {
         super.setupLayout()
         topBar.edgesToSuperview(excluding: .bottom)
-        tableView.topToBottom(of: topBar)
+        
+        segmentedControl.topToBottom(of: topBar)
+        segmentedControl.horizontalToSuperview()
+        
+        tableView.topToBottom(of: segmentedControl)
         tableView.edgesToSuperview(excluding: .top)
     }
     
     public override func configureViews() {
         super.configureViews()
+        segmentedControl.addTarget(self, action: #selector(ExchangeRatesListView.onSegmentedControlSelected(_:)), for: .valueChanged)
     }
-    
+
     public override func styleViews() {
         super.styleViews()
+        backgroundColor = .white
     }
-    
+
     public func setupView(with viewModel: ExchangeRatesListViewModel) {
-        
+        topBar.setTitle(viewModel.viewTitle)
+        topBar.showHideBackButtonIfNeeded(false)
+        segmentedControl.insertSegments(viewModel.segmentTitles)
     }
     
+    @objc private func onSegmentedControlSelected(_ sender: SegmentedControl) {
+        delegate?.onSegmentedControlSelected(inView: self, sender: sender)
+    }
+
 }

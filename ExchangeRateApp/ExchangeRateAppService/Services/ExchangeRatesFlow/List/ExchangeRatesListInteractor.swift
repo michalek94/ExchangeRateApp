@@ -11,12 +11,12 @@ import Alamofire
 
 public protocol ExchangeRatesListInteracting {
     func fetchExchangeRatesList(with table: ExchangeRateTable,
-                                completionHandler: ((DataResponse<[TableModel], AFError>) -> ())?)
+                                completionHandler: ((DataResponse<[ExchangeRatesTable], AFError>) -> ())?)
 }
 
 public class ExchangeRatesListInteractor: ConnectionService, ExchangeRatesListInteracting {
     public func fetchExchangeRatesList(with table: ExchangeRateTable,
-                                       completionHandler: ((DataResponse<[TableModel], AFError>) -> ())?) {
+                                       completionHandler: ((DataResponse<[ExchangeRatesTable], AFError>) -> ())?) {
         let urlString: String = String(format: "%@%@/%@", manager.baseUrl, "exchangerates/tables", table.rawValue)
         let url: URL = URL(string: urlString)!
         manager.requestArray(url, completionHandler: completionHandler)

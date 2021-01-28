@@ -6,8 +6,7 @@
 //  Copyright © 2021 Michał Pankowski. All rights reserved.
 //
 
-import ExchangeRateAppView
-import ExchangeRateAppViewModel
+import ExchangeRateAppViewViewModel
 import ExchangeRateAppModel
 import ExchangeRateAppService
 import ExchangeRateAppCommon
@@ -35,5 +34,20 @@ public class ExchangeRatesCoordinator: NavigationFlowCoordinator {
 }
 
 extension ExchangeRatesCoordinator: ExchangeRatesListViewModelFlowDelegate {
-    
+    public func onExchangeRateDetailsNeeded(in table: ExchangeRateTable, with currencyCode: String, _ currencyName: String) {
+        let interactor = ExchangeRateDetailsInteractor(manager: dependencies.connectionManager)
+        let viewModel = ExchangeRateDetailsViewModel(interactor: interactor,
+                                                     table: table,
+                                                     currencyCode: currencyCode,
+                                                     currencyName: currencyName)
+        viewModel.flowDelegate = self
+        let viewController = ExchangeRateDetailsViewController(viewModel: viewModel)
+        push(viewController: viewController)
+    }
+}
+
+extension ExchangeRatesCoordinator: ExchangeRateDetailsViewModelFlowDelegate {
+    public func onBackRequested() {
+        popLastViewController()
+    }
 }

@@ -6,4 +6,9 @@
   Copyright © 2021 Michał Pankowski. All rights reserved.
 */
 
-"ExchangeRatesListViewController.View.Title" = "Exchange Rates";
+"ExchangeRatesListViewController.View.Title" = "Kursy Walut";
+"ExchangeRateCell.TitleLabel.Text" = "(%@) -> %@";
+"ExchangeRateCell.ExchangeRateLabel.AB.Text" = "Średni kurs\n%.4f";
+"ExchangeRateCell.ExchangeRateLabel.C.Text" = "Kupno \n%.4f\nSprzedaż \n%.4f";
+"ExchangeRateCell.ExchangeRateDateLabel.Effective.Text" = "Publikacja \n%@";
+"ExchangeRateCell.ExchangeRateDateLabel.TradingEffective.Text" = "Data notowania %@\nData publikacji %@";

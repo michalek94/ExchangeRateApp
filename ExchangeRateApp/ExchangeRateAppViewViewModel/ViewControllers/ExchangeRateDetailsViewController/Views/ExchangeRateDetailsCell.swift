@@ -1,14 +1,14 @@
 //
-//  ExchangeRateCell.swift
+//  ExchangeRateDetailsCell.swift
 //  ExchangeRateAppViewViewModel
 //
-//  Created by Michał Pankowski on 27/01/2021.
+//  Created by Michał Pankowski on 29/01/2021.
 //  Copyright © 2021 Michał Pankowski. All rights reserved.
 //
 
 import ExchangeRateAppCommon
 
-public class ExchangeRateCell: UITableViewCell {
+public class ExchangeRateDetailsCell: UITableViewCell {
 
     private lazy var shadowView: ShadowView = {
         let view = ShadowView(shadowColor: .black,
@@ -29,7 +29,7 @@ public class ExchangeRateCell: UITableViewCell {
         return view
     }()
 
-    private lazy var exchangeRateCodeCurrencyNameLabel: UILabel = {
+    private lazy var exchangeRateTableNoLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
         label.numberOfLines = 0
@@ -76,7 +76,7 @@ public class ExchangeRateCell: UITableViewCell {
         contentView.add(
             shadowView.add(
                 containerView.add(
-                    exchangeRateCodeCurrencyNameLabel,
+                    exchangeRateTableNoLabel,
                     exchangeRateLabel,
                     exchangeRateDateLabel
                 )
@@ -89,18 +89,18 @@ public class ExchangeRateCell: UITableViewCell {
         
         containerView.edgesToSuperview()
         
-        exchangeRateCodeCurrencyNameLabel.topToSuperview(offset: 22.5)
-        exchangeRateCodeCurrencyNameLabel.leadingToSuperview(offset: 30.0)
-        exchangeRateCodeCurrencyNameLabel.trailingToSuperview(offset: 30.0)
-        exchangeRateCodeCurrencyNameLabel.setHugging(.init(200), for: .vertical)
+        exchangeRateTableNoLabel.topToSuperview(offset: 22.5)
+        exchangeRateTableNoLabel.leadingToSuperview(offset: 30.0)
+        exchangeRateTableNoLabel.trailingToSuperview(offset: 30.0)
+        exchangeRateTableNoLabel.setHugging(.init(200), for: .vertical)
 
-        exchangeRateLabel.topToBottom(of: exchangeRateCodeCurrencyNameLabel, offset: 15.0)
-        exchangeRateLabel.leading(to: exchangeRateCodeCurrencyNameLabel)
+        exchangeRateLabel.topToBottom(of: exchangeRateTableNoLabel, offset: 15.0)
+        exchangeRateLabel.leading(to: exchangeRateTableNoLabel)
         exchangeRateLabel.bottomToSuperview(offset: -22.5)
 
-        exchangeRateDateLabel.topToBottom(of: exchangeRateCodeCurrencyNameLabel, offset: 15.0)
+        exchangeRateDateLabel.topToBottom(of: exchangeRateTableNoLabel, offset: 15.0)
         exchangeRateDateLabel.leadingToTrailing(of: exchangeRateLabel)
-        exchangeRateDateLabel.trailing(to: exchangeRateCodeCurrencyNameLabel)
+        exchangeRateDateLabel.trailing(to: exchangeRateTableNoLabel)
         exchangeRateDateLabel.bottomToSuperview(offset: -22.5)
         exchangeRateDateLabel.width(to: exchangeRateLabel)
     }
@@ -109,9 +109,9 @@ public class ExchangeRateCell: UITableViewCell {
         selectionStyle = .none
     }
 
-    public func setupCell(with viewModel: ExchangeRateCellViewModel?) {
+    public func setupCell(with viewModel: ExchangeRateDetailsCellViewModel?) {
         guard let viewModel = viewModel else { return }
-        exchangeRateCodeCurrencyNameLabel.text = viewModel.exchangeRateCodeCurrencyName
+        exchangeRateTableNoLabel.text = viewModel.exchangeRateTableNo
         exchangeRateLabel.text = viewModel.averageExchangeRate
         exchangeRateDateLabel.text = viewModel.exchangeRateDate
     }

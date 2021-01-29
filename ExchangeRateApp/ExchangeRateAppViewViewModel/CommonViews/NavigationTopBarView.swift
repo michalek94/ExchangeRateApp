@@ -40,6 +40,8 @@ public class NavigationTopBarView: BaseView {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .center
+        label.numberOfLines = 1
         label.font = .systemFont(ofSize: 18.0, weight: .bold)
         label.textColor = .black
         return label

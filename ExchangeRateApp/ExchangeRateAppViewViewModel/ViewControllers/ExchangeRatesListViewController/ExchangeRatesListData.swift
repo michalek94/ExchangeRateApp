@@ -1,5 +1,5 @@
 //
-//  ExchangeRatesTableSectionData.swift
+//  ExchangeRatesListData.swift
 //  ExchangeRateAppViewViewModel
 //
 //  Created by Michał Pankowski on 28/01/2021.
@@ -8,7 +8,7 @@
 
 import ExchangeRateAppModel
 
-struct ExchangeRatesTableSectionData {
+struct ExchangeRatesListData {
 
     public var dataCount: Int { data.count }
     public var sectionTitle: String { String(format: "Tabela %@.%@ - %@", table.table, table.no, table.effectiveDate ?? "") }

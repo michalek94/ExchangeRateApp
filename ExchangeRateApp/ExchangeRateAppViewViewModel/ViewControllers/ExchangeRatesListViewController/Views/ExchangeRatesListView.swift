@@ -32,17 +32,11 @@ public class ExchangeRatesListView: BaseView {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
         tableView.register(ExchangeRateCell.self, forCellReuseIdentifier: ExchangeRateCell.identifier)
-        tableView.backgroundColor = .clear
+        tableView.backgroundColor = .white
         tableView.contentInset.bottom = UIDevice.current.bottomSafeAreaInset
         return tableView
     }()
-    
-    public override init() {
-        super.init()
-    }
-    
-    public required init?(coder: NSCoder) { nil }
-    
+
     public override func createViewsHierarchy() {
         super.createViewsHierarchy()
         add(

@@ -12,26 +12,28 @@ import ExchangeRateAppCommon
 public class ExchangeRateCellViewModel {
     
     public var exchangeRateCodeCurrencyName: String {
-        R.string.localizable.exchangeRateCellTitleLabelText(rate.code, rate.currency)
+        return R.string.localizable.exchangeRatesListViewControllerExchangeRateCellExchangeRateCodeCurrencyNameLabelText(code, currency)
     }
 
     public var exchangeRateDate: String? {
         switch table.table {
         case ExchangeRateTable.tableA.rawValue, ExchangeRateTable.tableB.rawValue:
-            return R.string.localizable.exchangeRateCellExchangeRateDateLabelEffectiveText(table.effectiveDate ?? "")
+            return R.string.localizable.exchangeRatesListViewControllerExchangeRateCellExchangeRateDateLabelEffectiveText(table.effectiveDate ?? "")
         case ExchangeRateTable.tableC.rawValue:
-            return R.string.localizable.exchangeRateCellExchangeRateDateLabelTradingEffectiveText(table.tradingDate ?? "", table.effectiveDate ?? "")
-        default: return nil
+            return R.string.localizable.exchangeRatesListViewControllerExchangeRateCellExchangeRateDateLabelTradingEffectiveText(table.tradingDate ?? "", table.effectiveDate ?? "")
+        default:
+            return nil
         }
     }
 
     public var averageExchangeRate: String? {
         switch table.table {
         case ExchangeRateTable.tableA.rawValue, ExchangeRateTable.tableB.rawValue:
-            return R.string.localizable.exchangeRateCellExchangeRateLabelABText(rate.mid ?? 0.0)
+            return R.string.localizable.exchangeRatesListViewControllerExchangeRateCellExchangeRateLabelTablesABText(rate.mid ?? 0.0)
         case ExchangeRateTable.tableC.rawValue:
-            return R.string.localizable.exchangeRateCellExchangeRateLabelCText(rate.bid ?? 0.0, rate.ask ?? 0.0)
-        default: return nil
+            return R.string.localizable.exchangeRatesListViewControllerExchangeRateCellExchangeRateLabelTableCText(rate.bid ?? 0.0, rate.ask ?? 0.0)
+        default:
+            return nil
         }
     }
     

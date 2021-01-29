@@ -33,7 +33,7 @@
 		1B01888E25C2E8580082D4A5 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B01888D25C2E8580082D4A5 /* ShadowView.swift */; };
 		1B01889425C2E8D40082D4A5 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B01889325C2E8D40082D4A5 /* UIColor+Extension.swift */; };
 		1B0188A925C2F6430082D4A5 /* UIDevice+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0188A825C2F6430082D4A5 /* UIDevice+SafeArea.swift */; };
-		1B0188CC25C306130082D4A5 /* ExchangeRatesTableSectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0188CB25C306130082D4A5 /* ExchangeRatesTableSectionData.swift */; };
+		1B0188CC25C306130082D4A5 /* ExchangeRatesListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0188CB25C306130082D4A5 /* ExchangeRatesListData.swift */; };
 		1B1762BC25C1F44A001FB9D9 /* ExchangeRateTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1762BB25C1F44A001FB9D9 /* ExchangeRateTable.swift */; };
 		1B1762C225C1F4E2001FB9D9 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1762C125C1F4E2001FB9D9 /* Rate.swift */; };
 		1B1762C825C1FA32001FB9D9 /* ExchangeRatesTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1762C725C1FA32001FB9D9 /* ExchangeRatesTable.swift */; };
@@ -76,6 +76,16 @@
 		1B586F4325C36A6100AFF78F /* ExchangeRateDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B586F4225C36A6100AFF78F /* ExchangeRateDetailsView.swift */; };
 		1B586F4D25C36A8D00AFF78F /* DatePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B586F4C25C36A8D00AFF78F /* DatePickerViewModel.swift */; };
 		1B586F5A25C36BBF00AFF78F /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B586F5925C36BBF00AFF78F /* DatePickerView.swift */; };
+		1B586F6C25C3822100AFF78F /* ExchangeRateDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B586F6B25C3822100AFF78F /* ExchangeRateDetails.swift */; };
+		1B586F7225C3826600AFF78F /* RateDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B586F7125C3826600AFF78F /* RateDetails.swift */; };
+		1B81EE2A25C3FC9B005BA644 /* ExchangeRateDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81EE2925C3FC9B005BA644 /* ExchangeRateDetailsCell.swift */; };
+		1B81EE3025C3FCE7005BA644 /* ExchangeRateDetailsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81EE2F25C3FCE7005BA644 /* ExchangeRateDetailsCellViewModel.swift */; };
+		1B81EE3A25C40278005BA644 /* ExchangeRateDetailsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81EE3925C40278005BA644 /* ExchangeRateDetailsData.swift */; };
+		1B81EE8525C42936005BA644 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81EE8425C42936005BA644 /* LoaderView.swift */; };
+		1B81EE9825C42B5B005BA644 /* SelectableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81EE9725C42B5B005BA644 /* SelectableView.swift */; };
+		1B81EEC325C42C0F005BA644 /* PaddableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81EEC225C42C0F005BA644 /* PaddableTextField.swift */; };
+		1B81EECD25C42D95005BA644 /* DropDownTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81EECC25C42D95005BA644 /* DropDownTextField.swift */; };
+		1B81EEDC25C44B15005BA644 /* AppDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81EEDB25C44B15005BA644 /* AppDateFormatter.swift */; };
 		3795D2D6F14BB96D4751BE7C /* Pods_ExchangeRateAppViewViewModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F9EA607CC07CF90655E056 /* Pods_ExchangeRateAppViewViewModel.framework */; };
 		9E4C27F804263302212F5D5E /* Pods_ExchangeRateAppCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8168BEB7CBA9C3C511E7AEE7 /* Pods_ExchangeRateAppCommon.framework */; };
 		BA13187BD08E5E719842F2C8 /* Pods_ExchangeRateAppModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A741AC0D917978B6F72EC0CE /* Pods_ExchangeRateAppModel.framework */; };
@@ -189,7 +199,7 @@
 		1B01888D25C2E8580082D4A5 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		1B01889325C2E8D40082D4A5 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		1B0188A825C2F6430082D4A5 /* UIDevice+SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+SafeArea.swift"; sourceTree = "<group>"; };
-		1B0188CB25C306130082D4A5 /* ExchangeRatesTableSectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesTableSectionData.swift; sourceTree = "<group>"; };
+		1B0188CB25C306130082D4A5 /* ExchangeRatesListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesListData.swift; sourceTree = "<group>"; };
 		1B1762BB25C1F44A001FB9D9 /* ExchangeRateTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateTable.swift; sourceTree = "<group>"; };
 		1B1762C125C1F4E2001FB9D9 /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
 		1B1762C725C1FA32001FB9D9 /* ExchangeRatesTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesTable.swift; sourceTree = "<group>"; };
@@ -231,6 +241,16 @@
 		1B586F4225C36A6100AFF78F /* ExchangeRateDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateDetailsView.swift; sourceTree = "<group>"; };
 		1B586F4C25C36A8D00AFF78F /* DatePickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewModel.swift; sourceTree = "<group>"; };
 		1B586F5925C36BBF00AFF78F /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		1B586F6B25C3822100AFF78F /* ExchangeRateDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateDetails.swift; sourceTree = "<group>"; };
+		1B586F7125C3826600AFF78F /* RateDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateDetails.swift; sourceTree = "<group>"; };
+		1B81EE2925C3FC9B005BA644 /* ExchangeRateDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateDetailsCell.swift; sourceTree = "<group>"; };
+		1B81EE2F25C3FCE7005BA644 /* ExchangeRateDetailsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateDetailsCellViewModel.swift; sourceTree = "<group>"; };
+		1B81EE3925C40278005BA644 /* ExchangeRateDetailsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateDetailsData.swift; sourceTree = "<group>"; };
+		1B81EE8425C42936005BA644 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		1B81EE9725C42B5B005BA644 /* SelectableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableView.swift; sourceTree = "<group>"; };
+		1B81EEC225C42C0F005BA644 /* PaddableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddableTextField.swift; sourceTree = "<group>"; };
+		1B81EECC25C42D95005BA644 /* DropDownTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownTextField.swift; sourceTree = "<group>"; };
+		1B81EEDB25C44B15005BA644 /* AppDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDateFormatter.swift; sourceTree = "<group>"; };
 		23193248FFA7DFC990557512 /* Pods-ExchangeRateAppService.release (staging).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExchangeRateAppService.release (staging).xcconfig"; path = "Target Support Files/Pods-ExchangeRateAppService/Pods-ExchangeRateAppService.release (staging).xcconfig"; sourceTree = "<group>"; };
 		318BAA4FAFC3F6E0D9DA0A14 /* Pods-ExchangeRateAppService.debug (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExchangeRateAppService.debug (development).xcconfig"; path = "Target Support Files/Pods-ExchangeRateAppService/Pods-ExchangeRateAppService.debug (development).xcconfig"; sourceTree = "<group>"; };
 		36787D8EF08344DB36D12BF0 /* Pods-ExchangeRateAppService.release (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExchangeRateAppService.release (production).xcconfig"; path = "Target Support Files/Pods-ExchangeRateAppService/Pods-ExchangeRateAppService.release (production).xcconfig"; sourceTree = "<group>"; };
@@ -348,10 +368,13 @@
 			isa = PBXGroup;
 			children = (
 				1B586F5925C36BBF00AFF78F /* DatePickerView.swift */,
+				1B81EE8425C42936005BA644 /* LoaderView.swift */,
 				1B01874325C2D98B0082D4A5 /* NavigationTopBarView.swift */,
+				1B81EEC225C42C0F005BA644 /* PaddableTextField.swift */,
 				1B01873D25C2D98B0082D4A5 /* RefreshableTableView.swift */,
 				1B586F3625C34E7C00AFF78F /* SegmentedControl.swift */,
 				1B01888D25C2E8580082D4A5 /* ShadowView.swift */,
+				1B81EECC25C42D95005BA644 /* DropDownTextField.swift */,
 			);
 			path = CommonViews;
 			sourceTree = "<group>";
@@ -385,7 +408,7 @@
 				1B01874025C2D98B0082D4A5 /* ExchangeRatesListViewController.swift */,
 				1B01882225C2E3960082D4A5 /* ViewModels */,
 				1B01879C25C2DAEA0082D4A5 /* Views */,
-				1B0188CB25C306130082D4A5 /* ExchangeRatesTableSectionData.swift */,
+				1B0188CB25C306130082D4A5 /* ExchangeRatesListData.swift */,
 			);
 			path = ExchangeRatesListViewController;
 			sourceTree = "<group>";
@@ -396,6 +419,7 @@
 				1B01873C25C2D98B0082D4A5 /* ExchangeRateDetailsViewController.swift */,
 				1B01882325C2E3A50082D4A5 /* ViewModels */,
 				1B01879B25C2DADE0082D4A5 /* Views */,
+				1B81EE3925C40278005BA644 /* ExchangeRateDetailsData.swift */,
 			);
 			path = ExchangeRateDetailsViewController;
 			sourceTree = "<group>";
@@ -404,6 +428,8 @@
 			isa = PBXGroup;
 			children = (
 				1B586F4225C36A6100AFF78F /* ExchangeRateDetailsView.swift */,
+				1B81EE2925C3FC9B005BA644 /* ExchangeRateDetailsCell.swift */,
+				1B81EE9725C42B5B005BA644 /* SelectableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -438,6 +464,7 @@
 			isa = PBXGroup;
 			children = (
 				1B0187B725C2DBE40082D4A5 /* ExchangeRateDetailsViewModel.swift */,
+				1B81EE2F25C3FCE7005BA644 /* ExchangeRateDetailsCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -565,6 +592,8 @@
 				1B50C45325C0CF1A004A870D /* Info.plist */,
 				1B1762C725C1FA32001FB9D9 /* ExchangeRatesTable.swift */,
 				1B1762C125C1F4E2001FB9D9 /* Rate.swift */,
+				1B586F6B25C3822100AFF78F /* ExchangeRateDetails.swift */,
+				1B586F7125C3826600AFF78F /* RateDetails.swift */,
 				1B1762BA25C1F436001FB9D9 /* Enums */,
 			);
 			path = ExchangeRateAppModel;
@@ -591,6 +620,7 @@
 				1B4A020A25C189B0006CE0D5 /* AppEnvironment.swift */,
 				1B4A040B25C1C2AF006CE0D5 /* R.generated.swift */,
 				1B4A040025C1C24F006CE0D5 /* Resources */,
+				1B81EEDB25C44B15005BA644 /* AppDateFormatter.swift */,
 			);
 			path = ExchangeRateAppCommon;
 			sourceTree = "<group>";
@@ -1086,16 +1116,23 @@
 				1B01874C25C2D98B0082D4A5 /* UITableView+Utility.swift in Sources */,
 				1B0187BC25C2DBE40082D4A5 /* BaseViewModel.swift in Sources */,
 				1B01874F25C2D98B0082D4A5 /* UIView+AddSubview.swift in Sources */,
+				1B81EE3A25C40278005BA644 /* ExchangeRateDetailsData.swift in Sources */,
 				1B0187BE25C2DBE40082D4A5 /* ExchangeRateCellViewModel.swift in Sources */,
+				1B81EE9825C42B5B005BA644 /* SelectableView.swift in Sources */,
 				1B586F5A25C36BBF00AFF78F /* DatePickerView.swift in Sources */,
 				1B01874A25C2D98B0082D4A5 /* ExchangeRateDetailsViewController.swift in Sources */,
-				1B0188CC25C306130082D4A5 /* ExchangeRatesTableSectionData.swift in Sources */,
+				1B0188CC25C306130082D4A5 /* ExchangeRatesListData.swift in Sources */,
 				1B01889425C2E8D40082D4A5 /* UIColor+Extension.swift in Sources */,
 				1B0187BD25C2DBE40082D4A5 /* ExchangeRatesListViewModel.swift in Sources */,
 				1B586F4325C36A6100AFF78F /* ExchangeRateDetailsView.swift in Sources */,
+				1B81EE3025C3FCE7005BA644 /* ExchangeRateDetailsCellViewModel.swift in Sources */,
+				1B81EE2A25C3FC9B005BA644 /* ExchangeRateDetailsCell.swift in Sources */,
+				1B81EECD25C42D95005BA644 /* DropDownTextField.swift in Sources */,
 				1B01875125C2D98B0082D4A5 /* NavigationTopBarView.swift in Sources */,
 				1B0188A925C2F6430082D4A5 /* UIDevice+SafeArea.swift in Sources */,
+				1B81EE8525C42936005BA644 /* LoaderView.swift in Sources */,
 				1B01874B25C2D98B0082D4A5 /* RefreshableTableView.swift in Sources */,
+				1B81EEC325C42C0F005BA644 /* PaddableTextField.swift in Sources */,
 				1B01875525C2D98B0082D4A5 /* ExchangeRatesListView.swift in Sources */,
 				1B01875025C2D98B0082D4A5 /* UIView+Animation.swift in Sources */,
 				1B01874925C2D98B0082D4A5 /* BaseView.swift in Sources */,
@@ -1131,7 +1168,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B1762BC25C1F44A001FB9D9 /* ExchangeRateTable.swift in Sources */,
+				1B586F6C25C3822100AFF78F /* ExchangeRateDetails.swift in Sources */,
 				1B1762C225C1F4E2001FB9D9 /* Rate.swift in Sources */,
+				1B586F7225C3826600AFF78F /* RateDetails.swift in Sources */,
 				1B1762C825C1FA32001FB9D9 /* ExchangeRatesTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1154,6 +1193,7 @@
 			files = (
 				1B4A037A25C1B64C006CE0D5 /* AppDataProvider.swift in Sources */,
 				1B4A036025C1B46D006CE0D5 /* AppEnvironment.swift in Sources */,
+				1B81EEDC25C44B15005BA644 /* AppDateFormatter.swift in Sources */,
 				1B4A037425C1B594006CE0D5 /* AppConstants.swift in Sources */,
 				1B4A040C25C1C2AF006CE0D5 /* R.generated.swift in Sources */,
 			);

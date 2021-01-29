@@ -7,8 +7,13 @@
 */
 
 "ExchangeRatesListViewController.View.Title" = "Kursy Walut";
-"ExchangeRateCell.TitleLabel.Text" = "(%@) -> %@";
-"ExchangeRateCell.ExchangeRateLabel.AB.Text" = "Średni kurs\n%.4f";
-"ExchangeRateCell.ExchangeRateLabel.C.Text" = "Kupno \n%.4f\nSprzedaż \n%.4f";
-"ExchangeRateCell.ExchangeRateDateLabel.Effective.Text" = "Publikacja \n%@";
-"ExchangeRateCell.ExchangeRateDateLabel.TradingEffective.Text" = "Data notowania %@\nData publikacji %@";
+"ExchangeRatesListViewController.ExchangeRateCell.ExchangeRateCodeCurrencyNameLabel.Text" = "(%@) -> %@";
+"ExchangeRatesListViewController.ExchangeRateCell.ExchangeRateLabel.TablesAB.Text" = "Średni kurs\n%.4f";
+"ExchangeRatesListViewController.ExchangeRateCell.ExchangeRateLabel.TableC.Text" = "Kupno \n%.4f\nSprzedaż \n%.4f";
+"ExchangeRatesListViewController.ExchangeRateCell.ExchangeRateDateLabel.Effective.Text" = "Publikacja \n%@";
+"ExchangeRatesListViewController.ExchangeRateCell.ExchangeRateDateLabel.TradingEffective.Text" = "Data notowania %@\nData publikacji %@";
+
+"ExchangeRateDetailsViewController.ExchangeRateDetailsCell.ExchangeRateTableNoLabel.Text" = "Tabela %@";
+"ExchangeRateDetailsViewController.ExchangeRateDetailsCell.ExchangeRateLabel.TablesAB.Text" = "Średni kurs\n%.4f";
+"ExchangeRateDetailsViewController.ExchangeRateDetailsCell.ExchangeRateLabel.TableC.Text" = "Kupno \n%.4f\nSprzedaż \n%.4f";
+"ExchangeRateDetailsViewController.ExchangeRateDetailsCell.ExchangeRateDateLabel.Effective.Text" = "Publikacja \n%@";

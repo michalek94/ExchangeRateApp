@@ -50,6 +50,7 @@ public class RefreshableTableView: UITableView {
     private func configureViews() {
         refreshLoader.addTarget(self, action: #selector(RefreshableTableView.refresh(_:)), for: .valueChanged)
         refreshControl = refreshLoader
+        refreshControl?.layer.zPosition = -1
     }
 
     private func styleViews() {

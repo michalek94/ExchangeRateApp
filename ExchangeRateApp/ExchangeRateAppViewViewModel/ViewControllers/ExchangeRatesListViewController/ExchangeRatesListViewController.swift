@@ -25,32 +25,66 @@ public class ExchangeRatesListViewController: BaseViewController<ExchangeRatesLi
     public override func viewDidLoad() {
         super.viewDidLoad()
         exchangeRatesListView.setupView(with: viewModel)
-    }
-    
-    public override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         viewModel.loadData()
     }
-    
+
     private func setupSubviews() {
-        exchangeRatesListView.tableView.delegate = viewModel
-        exchangeRatesListView.tableView.dataSource = viewModel
-        exchangeRatesListView.tableView.refreshDelegate = viewModel
-        exchangeRatesListView.delegate = viewModel
+        exchangeRatesListView.delegate = self
+        exchangeRatesListView.tableView.delegate = self
+        exchangeRatesListView.tableView.dataSource = self
+        exchangeRatesListView.tableView.refreshDelegate = self
     }
 
 }
 
 extension ExchangeRatesListViewController: ExchangeRatesListViewModelDelegate {
     public func onDataLoadingStarted() {
-        exchangeRatesListView.tableView.showLoadingFooterIfNeeded(true)
+        LoaderView.shared.showActivityIndicator(inView: view)
     }
 
     public func onDataLoadingFinished() {
-        exchangeRatesListView.tableView.showLoadingFooterIfNeeded(false)
+        LoaderView.shared.hideActivityIndicator()
     }
 
-    public func onDataReady() {
+    public func onDataReady(isReloading: Bool) {
+        if !isReloading {  exchangeRatesListView.tableView.setContentOffset(.zero, animated: false) }
         exchangeRatesListView.tableView.reloadData()
+    }
+}
+
+extension ExchangeRatesListViewController: ExchangeRatesListViewDelegate {
+    public func onSegmentedControlSelected(inView view: ExchangeRatesListView, sender: SegmentedControl) {
+        viewModel.setTable(withIndex: sender.selectedSegmentIndex)
+    }
+}
+
+extension ExchangeRatesListViewController: RefreshableTableViewDelegate {
+    public func refresh(completion: @escaping () -> ()) {
+        viewModel.reloadData(completion: completion)
+    }
+}
+
+extension ExchangeRatesListViewController: UITableViewDelegate {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didSelectRowAt(indexPath)
+    }
+}
+
+extension ExchangeRatesListViewController: UITableViewDataSource {
+    public func numberOfSections(in tableView: UITableView) -> Int { viewModel.numberOfSections }
+
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.getNumberOfRowsInSection(inSection: section)
+    }
+
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: ExchangeRateCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.changeCellBackgroundColorIfNeeded(indexPath.row % 2 == 0)
+        cell.setupCell(with: viewModel.getCellViewModel(atIndexPath: indexPath))
+        return cell
+    }
+
+    public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return viewModel.getTitleForHeaderInSection(inSection: section)
     }
 }

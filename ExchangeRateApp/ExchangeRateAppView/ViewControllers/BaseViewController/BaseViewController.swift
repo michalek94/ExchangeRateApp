@@ -8,7 +8,7 @@
 
 import ExchangeRateAppViewModel
 
-public class BaseViewController<ViewModel: BaseViewModel>: UIViewController {
+public class BaseViewController<ViewModel: BaseViewModel>: UIViewController, UIGestureRecognizerDelegate {
 
     public var viewModel: ViewModel
     
@@ -22,6 +22,15 @@ public class BaseViewController<ViewModel: BaseViewModel>: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.interactivePopGestureRecognizer?.delegate = nil
+    }
+    
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.interactivePopGestureRecognizer?.delegate = self
+    }
+    
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return navigationController?.viewControllers.count ?? 0 > 1
     }
 
 }

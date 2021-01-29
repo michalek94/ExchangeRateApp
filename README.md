@@ -1,11 +1,9 @@
 The following steps are mandatory to properly configure the project before starting it for the first time:
 
-Download pods - pod install call in terminal in project root
-Open ExchangeRateApp.xcworkspace in Xcode supported Swift 5 (Xcode 10.2 or higher).
-
+Download pods - pod install call in terminal in project root and then open ExchangeRateApp.xcworkspace in Xcode supported Swift 5 (Xcode 10.2 or higher).
 
 Architecture
-Instead of MVC, the pattern MVVM + C was used when writing the application. The flow management mechanism in the application is manage by so-called [FlowControllers] or [Coordinators]. Callbacks between the layers are usually implemented according to the Delegate pattern.
+Instead of MVC, the pattern MVVM + C was used when writing the application. The flow management mechanism in the application is managed by so-called [FlowControllers] or [Coordinators]. Callbacks between the layers are usually implemented according to the Delegate pattern.
 
 Project structure
 ExchangeRateApp.xcworkspace includes:
@@ -14,12 +12,13 @@ ExchangeRateApp.xcworkspace includes:
 ExchangeRateApp (Project)
 
 ExchangeRateApp - app target (AppDelegate, Coordinators)
-
 ExchangeRateAppView - view framework
 
 ExchangeRateAppViewModel - viewModel framework
 
 ExchangeRateAppModel - model framework
+
+ExchangeRateAppService - networking layer framework
 
 ExchangeRateAppCommon - common section for example: assets, extensions, fonts, etc.
 

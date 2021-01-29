@@ -12,6 +12,7 @@ ExchangeRateApp.xcworkspace includes:
 ExchangeRateApp (Project)
 
 ExchangeRateApp - app target (AppDelegate, Coordinators)
+
 ExchangeRateAppView - view framework
 
 ExchangeRateAppViewModel - viewModel framework

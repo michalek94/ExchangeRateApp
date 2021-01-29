@@ -11,13 +11,20 @@ target 'ExchangeRateApp' do
   sharedPods
 end
 
-target 'ExchangeRateAppViewViewModel' do
+target 'ExchangeRateAppView' do
   use_frameworks!
   inhibit_all_warnings!
 
   sharedPods
 
   pod "TinyConstraints"
+end
+
+target 'ExchangeRateAppViewModel' do
+  use_frameworks!
+  inhibit_all_warnings!
+
+  sharedPods
 end
 
 target 'ExchangeRateAppModel' do

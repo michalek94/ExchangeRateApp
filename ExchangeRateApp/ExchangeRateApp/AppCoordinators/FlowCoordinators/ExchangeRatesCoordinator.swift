@@ -6,7 +6,8 @@
 //  Copyright © 2021 Michał Pankowski. All rights reserved.
 //
 
-import ExchangeRateAppViewViewModel
+import ExchangeRateAppView
+import ExchangeRateAppViewModel
 import ExchangeRateAppModel
 import ExchangeRateAppService
 import ExchangeRateAppCommon

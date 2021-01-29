@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1B50C43C25C0CEE7004A870D"
+               BlueprintIdentifier = "1B81EF1B25C478A0005BA644"
                BuildableName = "ExchangeRateAppViewModel.framework"
                BlueprintName = "ExchangeRateAppViewModel"
                ReferencedContainer = "container:ExchangeRateApp.xcodeproj">
@@ -50,7 +50,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1B50C43C25C0CEE7004A870D"
+            BlueprintIdentifier = "1B81EF1B25C478A0005BA644"
             BuildableName = "ExchangeRateAppViewModel.framework"
             BlueprintName = "ExchangeRateAppViewModel"
             ReferencedContainer = "container:ExchangeRateApp.xcodeproj">

@@ -45,7 +45,6 @@ public class SelectableView: BaseView {
         let dropDown = DropDownTextField()
         dropDown.tag = 0
         dropDown.delegate = self
-        dropDown.placeholder = "Data od"
         return dropDown
     }()
 
@@ -53,14 +52,12 @@ public class SelectableView: BaseView {
         let dropDown = DropDownTextField()
         dropDown.tag = 1
         dropDown.delegate = self
-        dropDown.placeholder = "Data do"
         return dropDown
     }()
 
     private lazy var clearButton: UIButton = {
         let button = UIButton()
         button.isEnabled = false
-        button.setTitle("Wyczyść".uppercased(), for: .normal)
         button.addTarget(self, action: #selector(SelectableView.onClearTapped(_:)), for: .touchUpInside)
         button.backgroundColor = .blueDisabled
         button.setTitleColor(.white, for: .normal)
@@ -71,7 +68,6 @@ public class SelectableView: BaseView {
     private lazy var downloadButton: UIButton = {
         let button = UIButton()
         button.isEnabled = false
-        button.setTitle("Pobierz".uppercased(), for: .normal)
         button.addTarget(self, action: #selector(SelectableView.onDownloadTapped(_:)), for: .touchUpInside)
         button.backgroundColor = .blueDisabled
         button.setTitleColor(.white, for: .normal)
@@ -126,6 +122,10 @@ public class SelectableView: BaseView {
 
     public func setupView(with viewModel: ExchangeRateDetailsViewModel) {
         titleLabel.text = "Wybierz daty od/do"
+        dateFromDropDown.placeholder = viewModel.dateFromDropDownPlaceholder
+        dateToDropDown.placeholder = viewModel.dateToDropDownPlaceholder
+        clearButton.setTitle(viewModel.clearButtonTitleText, for: .normal)
+        downloadButton.setTitle(viewModel.downloadButtonTitleText, for: .normal)
     }
 
     @objc private func onClearTapped(_ sender: UIButton) {

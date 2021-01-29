@@ -15,7 +15,7 @@ public class Dependencies {
     public let connectionManager: ConnectionManager
     public let environment: AppEnvironment = AppEnvironment()
     
-    init() {
+    public init() {
         connectionManager = ConnectionManager(dataProvider: dataProvider,
                                               environment: environment)
     }

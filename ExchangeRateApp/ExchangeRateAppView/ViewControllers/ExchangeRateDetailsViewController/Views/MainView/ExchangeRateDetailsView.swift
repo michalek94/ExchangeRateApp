@@ -51,10 +51,6 @@ public class ExchangeRateDetailsView: BaseView {
         tableView.topToBottom(of: selectableView)
         tableView.edgesToSuperview(excluding: .top)
     }
-    
-    public override func configureViews() {
-        super.configureViews()
-    }
 
     public override func styleViews() {
         super.styleViews()
@@ -129,12 +125,7 @@ extension ExchangeRateDetailsView: DatePickerViewDelegate {
         })
     }
 
-    public func onSaveTapped() {
-        dismissPickers()
-    }
+    public func onSaveTapped() { dismissPickers() }
 
-    public func onDismissTapped() {
-        dismissPickers()
-    }
-
+    public func onDismissTapped() { dismissPickers() }
 }

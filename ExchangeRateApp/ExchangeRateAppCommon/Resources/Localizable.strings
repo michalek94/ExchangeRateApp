@@ -17,3 +17,8 @@
 "ExchangeRateDetailsViewController.ExchangeRateDetailsCell.ExchangeRateLabel.TablesAB.Text" = "Średni kurs\n%.4f";
 "ExchangeRateDetailsViewController.ExchangeRateDetailsCell.ExchangeRateLabel.TableC.Text" = "Kupno \n%.4f\nSprzedaż \n%.4f";
 "ExchangeRateDetailsViewController.ExchangeRateDetailsCell.ExchangeRateDateLabel.Effective.Text" = "Publikacja \n%@";
+
+"SelectableView.DateFromDropDown.Placeholder.Text" = "Data od";
+"SelectableView.DateToDropDown.Placeholder.Text" = "Data do";
+"SelectableView.ClearButton.Title.Text" = "Wyczyść";
+"SelectableView.DownloadButton.Title.Text" = "Pobierz";

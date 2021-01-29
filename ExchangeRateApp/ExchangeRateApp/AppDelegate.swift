@@ -22,13 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func configureApp(withOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.backgroundColor = UIColor.white
+        window.backgroundColor = .white
         self.window = window
-
-        if !(launchOptions?.keys.contains(UIApplication.LaunchOptionsKey.remoteNotification) ?? false) {
-            initialCoordinator = InitialCoordinator(window: window, dependencies: dependencies)
-            initialCoordinator?.start()
-        }
+        initialCoordinator = InitialCoordinator(window: window, dependencies: dependencies)
+        initialCoordinator?.start()
     }
 
 }

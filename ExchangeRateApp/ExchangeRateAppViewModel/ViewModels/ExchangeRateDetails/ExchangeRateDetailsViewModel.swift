@@ -28,6 +28,18 @@ public class ExchangeRateDetailsViewModel: BaseViewModel {
     public weak var delegate: ExchangeRateDetailsViewModelDelegate?
 
     public var viewTitle: String { currencyName.capitalized }
+    public var dateFromDropDownPlaceholder: String {
+        return R.string.localizable.selectableViewDateFromDropDownPlaceholderText()
+    }
+    public var dateToDropDownPlaceholder: String {
+        return R.string.localizable.selectableViewDateToDropDownPlaceholderText()
+    }
+    public var clearButtonTitleText: String {
+        return R.string.localizable.selectableViewClearButtonTitleText().uppercased()
+    }
+    public var downloadButtonTitleText: String {
+        return R.string.localizable.selectableViewDownloadButtonTitleText().uppercased()
+    }
     public var numberOfSections: Int { 1 }
     public var numberOfRowsInSection: Int { sectionData?.dataCount ?? 0 }
     public var titleForHeaderInSection: String? { sectionData?.sectionTitle }

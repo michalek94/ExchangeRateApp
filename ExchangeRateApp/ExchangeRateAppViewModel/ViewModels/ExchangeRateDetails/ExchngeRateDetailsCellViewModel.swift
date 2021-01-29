@@ -10,11 +10,11 @@ import ExchangeRateAppModel
 import ExchangeRateAppCommon
 
 public class ExchangeRateDetailsCellViewModel {
-    
+
     public var exchangeRateTableNo: String {
         return R.string.localizable.exchangeRateDetailsViewControllerExchangeRateDetailsCellExchangeRateTableNoLabelText(rate.no ?? "")
     }
-    
+
     public var exchangeRateDate: String {
         return R.string.localizable.exchangeRateDetailsViewControllerExchangeRateDetailsCellExchangeRateDateLabelEffectiveText(rate.effectiveDate ?? "")
     }

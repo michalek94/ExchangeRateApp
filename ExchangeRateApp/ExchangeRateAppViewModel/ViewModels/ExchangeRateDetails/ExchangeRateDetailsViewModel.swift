@@ -26,12 +26,12 @@ public class ExchangeRateDetailsViewModel: BaseViewModel {
 
     public weak var flowDelegate: ExchangeRateDetailsViewModelFlowDelegate?
     public weak var delegate: ExchangeRateDetailsViewModelDelegate?
-    
+
     public var viewTitle: String { currencyName.capitalized }
     public var numberOfSections: Int { 1 }
     public var numberOfRowsInSection: Int { sectionData?.dataCount ?? 0 }
     public var titleForHeaderInSection: String? { sectionData?.sectionTitle }
-    
+
     private var sectionData: ExchangeRateDetailsData?
     private var dateFrom: String? = nil {
         didSet {
@@ -60,7 +60,7 @@ public class ExchangeRateDetailsViewModel: BaseViewModel {
         self.currencyCode = currencyCode
         self.currencyName = currencyName
     }
-    
+
     private func fetchDetails(with table: ExchangeRateTable,
                               code: String,
                               from fromDate: String? = nil,
@@ -131,7 +131,7 @@ public class ExchangeRateDetailsViewModel: BaseViewModel {
     public func onBackRequested() {
         flowDelegate?.onBackRequested()
     }
-    
+
     public func getDateFromPickerViewModel() -> DatePickerViewModel {
         var selectedDate = Date()
         if let dateFrom = self.dateFrom, let date = AppDateFormatter.shared.date(from: dateFrom) {
@@ -147,7 +147,7 @@ public class ExchangeRateDetailsViewModel: BaseViewModel {
             self?.delegate?.onPickedDate(dateFrom: self?.dateFrom, dateTo: nil)
         }
     }
-    
+
     public func getDateToPickerViewModel() -> DatePickerViewModel {
         var selectedDate = Date()
         if let dateTo = self.dateTo, let date = AppDateFormatter.shared.date(from: dateTo) {
@@ -164,17 +164,16 @@ public class ExchangeRateDetailsViewModel: BaseViewModel {
             self?.delegate?.onPickedDate(dateFrom: nil, dateTo: self?.dateTo)
         }
     }
-    
+
     public func clearDates() {
         self.dateFrom = nil
         self.maximumDateFrom = nil
         self.dateTo = nil
         self.minimumDateTo = nil
     }
-    
+
     private func validateForm() {
         delegate?.onSearchAvailable(dateFrom != nil && dateTo != nil)
     }
 
 }
-

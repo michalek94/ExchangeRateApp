@@ -429,7 +429,6 @@
 			isa = PBXGroup;
 			children = (
 				1B01879825C2DABD0082D4A5 /* BaseViewController */,
-				1B586F5225C36B6F00AFF78F /* CommonViewControllers */,
 				1B01879925C2DACA0082D4A5 /* ExchangeRatesListViewController */,
 				1B01879A25C2DAD20082D4A5 /* ExchangeRateDetailsViewController */,
 			);
@@ -440,13 +439,13 @@
 			isa = PBXGroup;
 			children = (
 				1B586F5925C36BBF00AFF78F /* DatePickerView.swift */,
+				1B81EECC25C42D95005BA644 /* DropDownTextField.swift */,
 				1B81EE8425C42936005BA644 /* LoaderView.swift */,
 				1B01874325C2D98B0082D4A5 /* NavigationTopBarView.swift */,
 				1B81EEC225C42C0F005BA644 /* PaddableTextField.swift */,
 				1B01873D25C2D98B0082D4A5 /* RefreshableTableView.swift */,
 				1B586F3625C34E7C00AFF78F /* SegmentedControl.swift */,
 				1B01888D25C2E8580082D4A5 /* ShadowView.swift */,
-				1B81EECC25C42D95005BA644 /* DropDownTextField.swift */,
 			);
 			path = CommonViews;
 			sourceTree = "<group>";
@@ -477,7 +476,6 @@
 			isa = PBXGroup;
 			children = (
 				1B01874025C2D98B0082D4A5 /* ExchangeRatesListViewController.swift */,
-				1B01882225C2E3960082D4A5 /* ViewModels */,
 				1B01879C25C2DAEA0082D4A5 /* Views */,
 			);
 			path = ExchangeRatesListViewController;
@@ -495,9 +493,8 @@
 		1B01879B25C2DADE0082D4A5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1B586F4225C36A6100AFF78F /* ExchangeRateDetailsView.swift */,
-				1B81EE2925C3FC9B005BA644 /* ExchangeRateDetailsCell.swift */,
-				1B81EE9725C42B5B005BA644 /* SelectableView.swift */,
+				1B81F00F25C47F1B005BA644 /* MainView */,
+				1B81F01025C47F23005BA644 /* Subviews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -505,8 +502,8 @@
 		1B01879C25C2DAEA0082D4A5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1B01874725C2D98B0082D4A5 /* ExchangeRatesListView.swift */,
-				1B01874525C2D98B0082D4A5 /* ExchangeRateCell.swift */,
+				1B81F00D25C47F07005BA644 /* MainView */,
+				1B81F00E25C47F0E005BA644 /* Subviews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -517,13 +514,6 @@
 				1B01873B25C2D98A0082D4A5 /* BaseView.swift */,
 			);
 			path = BaseViews;
-			sourceTree = "<group>";
-		};
-		1B01882225C2E3960082D4A5 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		1B1762BA25C1F436001FB9D9 /* Enums */ = {
@@ -698,13 +688,6 @@
 			path = CoordinatorConfiguration;
 			sourceTree = "<group>";
 		};
-		1B586F5225C36B6F00AFF78F /* CommonViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CommonViewControllers;
-			sourceTree = "<group>";
-		};
 		1B81EF1D25C478A0005BA644 /* ExchangeRateAppViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -720,8 +703,8 @@
 		1B81EF6D25C47932005BA644 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				1B81EFA725C47BD8005BA644 /* ExchangeRateDetails */,
 				1B81EF6E25C47939005BA644 /* ExchangeRatesList */,
+				1B81EFA725C47BD8005BA644 /* ExchangeRateDetails */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -744,6 +727,39 @@
 				1B81EFC525C47C29005BA644 /* ExchangeRateDetailsData.swift */,
 			);
 			path = ExchangeRateDetails;
+			sourceTree = "<group>";
+		};
+		1B81F00D25C47F07005BA644 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				1B01874725C2D98B0082D4A5 /* ExchangeRatesListView.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		1B81F00E25C47F0E005BA644 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				1B01874525C2D98B0082D4A5 /* ExchangeRateCell.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		1B81F00F25C47F1B005BA644 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				1B586F4225C36A6100AFF78F /* ExchangeRateDetailsView.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		1B81F01025C47F23005BA644 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				1B81EE2925C3FC9B005BA644 /* ExchangeRateDetailsCell.swift */,
+				1B81EE9725C42B5B005BA644 /* SelectableView.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 		E9D23192E8D34A9D6A828173 /* Frameworks */ = {

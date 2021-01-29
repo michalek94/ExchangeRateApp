@@ -78,7 +78,8 @@ public class DropDownTextField: BaseView {
         let view = UIView(frame: CGRect(x: textField.frame.size.width - 55.0, y: 0.0, width: 55.0, height: 50.0))
         let dropDownImageButton = UIButton()
         dropDownImageButton.contentMode = .scaleToFill
-        dropDownImageButton.setImage(R.image.calendar_icon(), for: .normal)
+        dropDownImageButton.setImage(R.image.calendar()?.withRenderingMode(.alwaysTemplate), for: .normal)
+        dropDownImageButton.imageView?.tintColor = .lightGray
         dropDownImageButton.size(CGSize(width: 55.0, height: 50.0))
         view.add(dropDownImageButton)
         dropDownImageButton.edgesToSuperview()

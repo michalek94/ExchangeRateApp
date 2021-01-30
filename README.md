@@ -1,3 +1,5 @@
+#ExchangeRateApp
+
 The following steps are mandatory to properly configure the project before starting it for the first time:
 
 Download pods - pod install call in terminal in project root and then open ExchangeRateApp.xcworkspace in Xcode supported Swift 5 (Xcode 10.2 or higher).

@@ -1,4 +1,4 @@
-#ExchangeRateApp
+# ExchangeRateApp
 
 The following steps are mandatory to properly configure the project before starting it for the first time:
 
